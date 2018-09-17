@@ -1,0 +1,2 @@
+(println "indirect, txt: hello, world!")
+(println (eval (read-string "(+ 2 5)")))
