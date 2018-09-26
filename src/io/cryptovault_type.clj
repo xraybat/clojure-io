@@ -1,4 +1,4 @@
-(ns io.cryptovault
+(ns io.cryptovault-type
   (:require [clojure.java.io :as io]
             [io.protocol :as protocol])
   (:import (java.security KeyStore KeyStore$SecretKeyEntry KeyStore$PasswordProtection)

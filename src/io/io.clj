@@ -1,7 +1,7 @@
 (ns io.io)
 ;; difficult to import types from another namespace??
-;;(:require [io.cryptovault])
-;;(:import [io.cryptovault CryptoVault])
+;;(:require [io.cryptovault-type :as crypto])
+;;(:import [io.cryptovault-type CryptoVault])
 
 (require '[io.gulp-expectorate :as io])
 (require '[io.protocol :as protocol])
@@ -17,7 +17,7 @@
 
 ;; didn't get this to work outside of original namespace??
 (comment
-  (def vault (->io.cryptovault.CryptoVault "vault-file.dat" "keystore" "toomanysecrets"))
+  (def vault (->crypto/CryptoVault "vault-file.dat" "keystore" "toomanysecrets"))
   (crypto/init-vault vault)
   (protocol/expectorate vault "this is a test of CryptoVault")
   (protocol/gulp vault)
