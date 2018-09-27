@@ -75,15 +75,19 @@
                        (->Note :G 2 1/2)])
 
 (perform close-encounters)
+(Thread/sleep 3000)
 
 (def jaws (for [duration [1/2 1/2 1/4 1/4 1/8 1/8 1/8 1/8]
                 pitch [:E :F]]
             (Note. pitch 2 duration)))
 
 (perform jaws)
+(Thread/sleep 3000)
 
 ;; alter them
 (perform (map #(update-in % [:octave] inc) close-encounters))
+(Thread/sleep 3000)
 (perform (map #(update-in % [:octave] dec) close-encounters))
+(Thread/sleep 3000)
 (perform (for [velocity [64 80 90 100 110 120]]
            (assoc (Note. :D 3 1/2) :velocity velocity)))
